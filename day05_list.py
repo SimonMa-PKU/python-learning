@@ -17,16 +17,18 @@
 # print(numbers)
 
 count = int(input("How many numbers? "))
+if count <= 0:
+    print("Please enter a positive number.")
+else:
+    numbers = []
 
-numbers = []
+    for _ in range(count):
+        num = float(input("Enter number: "))
+        numbers.append(num)
 
-for _ in range(count):
-    num = float(input("Enter number: "))
-    numbers.append(num)
+    total = sum(numbers)
 
-total = sum(numbers)
-
-print(f"Numbers: {numbers}")
-print(f"Total is {total:.2f}")
-print(f"The max is {max(numbers)}")
-print(f"The min is {min(numbers)}")
+    print(f"Numbers: {numbers}")
+    print(f"Total is {total:.2f}")
+    print(f"The max is {max(numbers)}")
+    print(f"The min is {min(numbers)}")
