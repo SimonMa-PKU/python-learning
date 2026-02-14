@@ -27,10 +27,35 @@ for _ in range(count):
     score = float(input("Enter score: "))
     students[name] = score
 
-print("\nStudent Scores:")
-for name, score in students.items():
-    print(name, ":", score)
+if count == 0:
+    print("No students entered.")
+else:
+    print("\nStudent Scores:")
+    for name, score in students.items():
+        print(name, ":", score)
 
-print(f"The Max is {max(students.values())}")
-ave = sum(students.values())/count
-print(f"The Average is {ave:.2f}")
+    #print(f"The Max is {max(students.values())}")
+    top_student = max(students, key=students.get) #get the key of the max value
+    print(f"Top student: {top_student} ({students[top_student]})")
+
+    ave = sum(students.values())/count
+    print(f"The Average is {ave:.1f}")
+
+# students = {
+#     "Tom": 90,
+#     "Lisa": 85,
+#     "Jack": 70,
+#     "Anna": 95,
+#     "Mike": 88
+# }
+
+# sorted_students = sorted(
+#     students.items(),
+#     key=lambda x: x[1],
+#     reverse=True
+# )
+
+# print("Top 3 Students:")
+# for i in range(min(3, len(sorted_students))):
+#     name, score = sorted_students[i]
+#     print(f"{i+1}. {name} - {score}")
