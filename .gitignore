@@ -1,0 +1,9 @@
+# Data files
+students_oop.json
+students.json
+students.txt
+test.txt
+
+# Python cache
+__pycache__/
+*.pyc
