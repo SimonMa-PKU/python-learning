@@ -1,6 +1,6 @@
 import json
 import os
-from student import Student
+from .student import Student
 
 class StudentManager:
     def __init__(self):
@@ -14,11 +14,13 @@ class StudentManager:
             print(s)
 
     def save(self, filename):
+        filename = str(filename)
         data = [s.to_dict() for s in self.students]
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4)
     
     def load(self, filename):
+        filename = str(filename)
         if not os.path.exists(filename):
             return
         with open(filename, "r", encoding="utf-8") as f:

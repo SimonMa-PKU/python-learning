@@ -1,9 +1,11 @@
-from manager import StudentManager
+from .manager import StudentManager
+from pathlib import Path
 
 def main():
     manager = StudentManager()
+    data_file = Path(__file__).with_name("data") / "students.json"
 
-    manager.load("students.json")
+    manager.load(data_file)
 
     while True:
         print("\n1) Add student")
@@ -22,7 +24,7 @@ def main():
             manager.show_all()
         
         elif choice == "3":
-            manager.save("students.json")
+            manager.save(data_file)
         
         elif choice == "0":
             break
