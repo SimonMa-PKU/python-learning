@@ -3,7 +3,17 @@ students_oop.json
 students.json
 students.txt
 test.txt
+student_system/students.json
+student_system/data/students.json
 
 # Python cache
+venv/
 __pycache__/
 *.pyc
+
+# Coverage / test artifacts
+.coverage
+htmlcov/
+
+# Editable install metadata
+*.egg-info/
