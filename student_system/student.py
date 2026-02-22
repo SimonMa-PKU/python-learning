@@ -8,7 +8,7 @@ class Student:
             return "A"
         elif self.score >= 80:
             return "B"
-        elif self.score >= 70:
+        elif self.score >= 60:
             return "C"
         else:
             return "F"
